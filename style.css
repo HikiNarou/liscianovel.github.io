@@ -1,0 +1,388 @@
+/* style.css */
+body {
+    font-family: sans-serif;
+    background-color: #1e293b;
+    color: #e2e8f0;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #334155;
+    padding: 15px 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav {
+    margin-left: 30px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+.search-bar {
+    margin-left: auto;
+    display: flex;
+}
+
+.search-bar input {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+    color: #334155;
+}
+
+.search-bar button {
+    background-color: #4b5563;
+    color: #cbd5e1;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.notification {
+    margin-left: 20px;
+    position: relative;
+    color: #cbd5e1;
+}
+
+.notification i {
+    font-size: 20px;
+}
+
+.notification .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #dc2626;
+    color: #fff;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-size: 10px;
+}
+
+/* Announcement Bar */
+.announcement-bar {
+    background-color: #ea580c;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+/* Main Content */
+main {
+    padding: 20px 0;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    color: #f9fafb;
+    margin-bottom: 20px;
+}
+
+/* Recommendations */
+.recommendations .genre-filter {
+    margin-bottom: 15px;
+}
+
+.recommendations .genre-filter a {
+    display: inline-block;
+    background-color: #4b5563;
+    color: #cbd5e1;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.recommendations .manga-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding-bottom: 15px;
+}
+
+.recommendations .manga-item {
+    background-color: #334155;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 150px;
+    position: relative;
+}
+
+.recommendations .manga-item img {
+    width: 100%;
+    display: block;
+    filter: blur(0px); /* Initially no blur */
+    transition: filter 0.3s ease;
+}
+
+.recommendations .manga-item:hover img {
+    filter: blur(3px); /* Add blur on hover */
+}
+
+.recommendations .manga-item h3 {
+    color: #f9fafb;
+    font-size: 14px;
+    margin: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.recommendations .manga-item .rating {
+    color: #fde047;
+    font-size: 12px;
+    margin: 0 10px 10px;
+}
+
+.recommendations .manga-item .rating i {
+    margin-right: 3px;
+}
+
+.recommendations .manga-item .label {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+
+.recommendations .manga-item .doujin {
+    background-color: #dc2626;
+}
+
+.recommendations .manga-item .ln {
+    background-color: #059669;
+}
+
+.recommendations .manga-item .manhwa {
+    background-color: #a855f7;
+}
+
+.recommendations .manga-item .wn {
+    background-color: #16a34a;
+}
+
+.recommendations .manga-item.locked .locked-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+.recommendations .manga-item.locked .locked-overlay i {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+/* Release */
+.release .update-release,
+.release .latest-release {
+    margin-bottom: 20px;
+}
+
+.release h3 {
+    color: #f9fafb;
+    margin-bottom: 10px;
+}
+
+.release .release-list,
+.release .manga-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding-bottom: 15px;
+}
+
+.release .release-list .manga-item,
+.release .manga-list .manga-item {
+    background-color: #334155;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 150px;
+    position: relative;
+}
+
+.release .release-list .manga-item img,
+.release .manga-list .manga-item img {
+    width: 100%;
+    display: block;
+}
+
+.release .release-list .manga-item h3,
+.release .manga-list .manga-item h3 {
+    color: #f9fafb;
+    font-size: 14px;
+    margin: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.release .release-list .manga-item .chapter-list p,
+.release .manga-list .manga-item .chapter-list p {
+    color: #cbd5e1;
+    font-size: 12px;
+    margin: 5px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.release .release-list .manga-item .chapter-list span,
+.release .manga-list .manga-item .chapter-list span {
+    color: #94a3b8;
+    float: right;
+}
+
+/* Latest Chapter */
+.latest-chapter .chapter-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.latest-chapter .chapter-list li {
+    background-color: #334155;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.latest-chapter .chapter-list li img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.latest-chapter .chapter-list li a {
+    color: #f9fafb;
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.latest-chapter .chapter-list li span {
+    color: #94a3b8;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.latest-chapter .pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.latest-chapter .pagination a {
+    display: inline-block;
+    background-color: #4b5563;
+    color: #cbd5e1;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 14px;
+}
+
+/* Footer */
+footer {
+    background-color: #1e293b;
+    border-top: 1px solid #334155;
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo img {
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    color: #cbd5e1;
+    font-size: 18px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+    display: flex;
+}
+
+footer nav li {
+    margin: 0 15px;
+}
+
+footer nav a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+footer p {
+    color: #94a3b8;
+    font-size: 12px;
+}
